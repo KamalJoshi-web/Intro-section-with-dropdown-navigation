@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Fraunces:opsz,wght@9..144,500&family=Montserrat:wght@500;700&family=Overpass:wght@400;700&display=swap');
+/* font-family: 'Epilogue', sans-serif; */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Epilogue', sans-serif;
+}
+.navbar{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 5.5rem;
+}
+.navigation{
+    display: flex;
+    gap: 3rem;
+    color: hsl(0, 0%, 41%);
+    cursor: pointer;
+   
+}
+
+.brand-name{
+    font-size: 2.5rem;
+    color: hsl(0, 0%, 8%);
+    cursor: pointer;
+}
+
+.login-reg-btn{
+     font-size: 1rem; 
+     align-self: baseline;
+     cursor: pointer;
+     
+}
+.login{
+    border-radius: 1rem;
+    border: none;
+    padding: 0.8rem;
+    color: hsl(0, 0%, 41%);
+    margin: 0rem 0.5rem 0rem 0rem;
+    cursor: pointer;
+ 
+}
+.login:hover{
+    color: hsl(0, 0%, 8%);
+}
+.register{
+    background-color: hsl(0, 0%, 98%);
+    border-radius: 1rem;
+    padding: 0.61rem 1rem;
+    border: .15rem solid hsl(0, 0%, 41%);
+    color: hsl(0, 0%, 41%);
+    cursor: pointer;
+}
+.register:hover{
+    border: .15rem solid hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 8%);
+}
+.container{
+  
+    display: grid;
+    grid-template-areas: 'one two';
+    justify-items: center;
+    max-width: 70%;
+    margin: auto;
+    
+}
+.informations{
+    grid-area: one;
+    align-self: center;
+}
+.pictures{
+    grid-area: two;
+}
+.main-heading{
+    font-size: 5rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 8%);
+}
+
+.pictures > picture > img{
+   max-width: 23rem;
+    display: block;
+    margin: auto;
+}
+.other-info{
+    margin: 2rem 0rem;
+    padding: 0rem 10rem 0rem 0rem;
+    font-size: 1.2rem;
+    color: hsl(0, 0%, 41%);
+}
+.learn-more{
+    margin: 1rem 0rem;
+    width: 9rem;
+    height: 3.2rem;
+    border: none;
+    background-color: hsl(0, 0%, 8%);
+    border-radius: 10px;
+    color: hsl(0, 0%, 98%);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.learn-more:hover{
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 8%);
+    border: 1px solid hsl(0, 0%, 8%);
+    font-weight: 700;
+}
+.companies > img{
+    margin: 2rem 0rem;
+    padding: 1rem 1rem;
+}
+.dropdown{
+    position: absolute;
+    top: 8%;
+    left: 19%;
+    width: 8.5rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 98%);
+    border-radius: 7px;
+    box-shadow: 0px 2px 8px 1px hsl(0deg 0% 41%);
+     opacity: 0;
+     transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+.dropdown > li > img{
+    margin: 0rem 0.5rem;
+}
+.dropdown2{
+    position: absolute;
+    top: 8%;
+    left: 32%;
+    width: 7.5rem;
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 98%);
+    border-radius: 7px;
+    box-shadow: 0px 2px 8px 1px hsl(0deg 0% 41%);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+.active{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+#ham{
+    display: none;
+}
+
+
+.text:hover{
+    color: hsl(0, 0%, 8%);
+    font-weight: 500;
+}
+.arrow:hover{
+    color: hsl(0, 0%, 8%);
+    font-weight: 500;
+}
+
+/* This is for mediam size screens */
+
+@media screen and (max-width:1275px) {
+    .container{
+        grid-template-areas: 
+        'two'
+        'one'
+        ;
+        gap: 1rem;
+    }
+    .pictures > picture > img{
+        max-width: 100%;
+    }
+    .informations{
+        text-align: center;
+    }
+    .main-heading{
+        display: inline;
+        font-size: 3rem;
+    }
+    .other-info{
+        padding: 0;
+    }
+   
+
+}
+/* This for mobile version with menu bar */
+@media screen and (max-width:760px) {
+    
+    .login-reg-btn{
+        display: none;
+    }
+    .toggle-btn{
+        display: none;
+    }
+    .text{
+        display: none;
+    }
+   
+    #ham{
+        display: block;
+        cursor: pointer;
+    }
+    
+    .main-heading{
+        font-size: 2rem;
+    }
+    .container{
+        max-width: 100%;
+    position: fixed;
+    top: 5rem;
+    z-index: -1;
+    
+    }
+    .companies > img{
+        margin: 2rem 0rem;
+        padding: 0rem 0.2rem;
+        width: 4.5rem;
+    }
+    .text-extra{
+        display: contents;
+    }
+    .toggle-btn-extra{
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown,.dropdown2{
+        position: static;
+    display: none;
+    }
+    
+    
+    .ham-extra{
+       
+        position: fixed;
+    top: 1.2rem;
+    right: 15%;
+    }
+    .navbar-extra{
+        height: 200vh;
+    width: 192px;
+    background-color: hsl(0, 0%, 98%);
+    opacity: 1;
+    margin-left: auto;
+    z-index: 9999;
+    margin-top: 0;
+    display: flex;
+
+    }
+    .brand-name-extra{
+        position: fixed;
+        left: 10.625%;
+    top: 1rem;
+    display: block;
+    
+
+    }
+    .navigation-extra{
+        color: hsl(0, 0%, 41%);
+        position: absolute;
+        flex-direction: column;
+        top: 5rem;
+        display: flex;
+        text-align: left;
+        width: 34%;
+        position: fixed;
+    }
+    .login-reg-btn-extra{
+        position: fixed;
+        display: grid;
+        gap: 1rem;
+        top: 33rem;
+    }
+    .black{
+        position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    opacity: .5;
+    top: 0rem;
+    z-index: -1;
+    }
+    .active-for-mobile{
+        position: static;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+        justify-content: center;
+        transition: none;
+        transform: none;
+        border: none;
+        border-radius: none;
+        border-radius: initial;
+        box-shadow: none;
+        opacity: 1;
+        
+    }
+    .register-extra{
+        padding: 0.61rem 3rem;
+        font-size: 1rem;
+    }
+    .login-extra{
+        background: none;
+    font-size: 1rem;
+    }
+    .companies{
+        margin: -1rem 0rem;
+    }
+    .learn-more{
+        margin: 0rem 0rem;
+    }
+
+
+}
+/* This is for smallest size screens */
+@media screen and (max-width:281px) {
+   .brand-name-extra{
+    opacity: 0;
+   }
+}

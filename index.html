@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body id="body">
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="nav">
+      <div class="navigation" id="navi">
+        <!-- first container of navigation Bar -->
+        <img src="./images/logo.svg" alt="logo" class="brand-name" id="logo" />
+        <div class="toggle-btn" id="features">
+          <span class="text">Features</span>
+          <img
+            src="./images/icon-arrow-down.svg"
+            alt="down Arrow"
+            id="feat-arrow"
+            class="arrow"
+          />
+
+          <!-- Dropdown of features for Desktop Size  -->
+          <div class="dropdown" id="feat">
+            <li>
+              <img src="./images/icon-todo.svg" alt="Todo List icons" /> Todo
+              List
+            </li>
+            <li>
+              <img
+                src="./images/icon-calendar.svg"
+                alt="Calender icons"
+              />Calender
+            </li>
+            <li>
+              <img
+                src="./images/icon-reminders.svg"
+                alt="Reminder icons"
+              />Reminder
+            </li>
+            <li>
+              <img
+                src="./images/icon-planning.svg"
+                alt="Planning icons"
+              />Planning
+            </li>
+          </div>
+        </div>
+
+        <!--Dropdown of comapny for Desktop Size  -->
+
+        <div class="toggle-btn" id="company">
+          <span class="text">Company</span>
+          <img src="./images/icon-arrow-down.svg" id="com-arrow" class="arrow"/>
+          <div class="dropdown2" id="com">
+            <li>History</li>
+            <li>Our Team</li>
+            <li>Blog</li>
+          </div>
+        </div>
+        <!-- Other links -->
+        <li><span class="text">Careers</span></li>
+        <li><span class="text">About</span></li>
+      </div>
+
+      <!-- Second container of Navigation Bar  -->
+      <div class="login-reg-btn" id="btns">
+        <button class="login" id="log">Login</button>
+        <button class="register" id="reg">Register</button>
+      </div>
+      <!-- Menu button for mobile size  -->
+      <img src="./images/icon-menu.svg" alt="menu" id="ham" />
+    </nav>
+    <!-- Main Container of page -->
+
+    <main>
+      <!-- Information Container -->
+      <div class="container">
+        <div class="informations">
+          <h1 class="main-heading">Make</h1>
+          <h1 class="main-heading">remote work</h1>
+          <p class="other-info">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button class="learn-more">Learn more</button>
+          <div class="companies">
+            <img src="./images/client-databiz.svg" alt="these are companies" />
+            <img
+              src="./images/client-audiophile.svg"
+              alt="these are companies"
+            />
+            <img src="./images/client-meet.svg" alt="these are companies" />
+            <img src="./images/client-maker.svg" alt="these are companies" />
+          </div>
+        </div>
+        <!-- Picture Container -->
+        <div class="pictures">
+          <picture>
+            <source
+              media="(min-width: 1275px)"
+              srcset="./images/image-hero-desktop.png"
+            />
+            <img src="./images/image-hero-mobile.png" alt="this is an image" />
+          </picture>
+        </div>
+      </div>
+
+      <!-- To Black Out the background for mobile size -->
+      <div class="background" id="bg-black"></div>
+    </main>
+  </body>
+</html>
